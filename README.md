@@ -13,7 +13,7 @@ A defense tool that monitors the network for ARP poisoning attempts. It analyzes
 ### 3. MAC Flooder (`mac_flooder.py`)
 A script designed to overflow the **CAM Table** of a switch by sending thousands of Ethernet frames with random MAC addresses, demonstrating how a switch can be forced into "fail-open" mode.
 
-## :tools: Requirements
+## 🧰: Requirements
 - Python 3.x
 - Scapy Library (`pip install scapy`)
 - Root/Admin privileges (to craft raw packets)
